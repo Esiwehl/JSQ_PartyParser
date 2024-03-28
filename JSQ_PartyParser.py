@@ -33,7 +33,7 @@ def getPartyType(items):
 
 # Define a function to extract notes from the 'Items' column
 def getNotes(items):
-    notes_keywords = ['slush', 'taart', 'diploma', 'snoepzakjes']
+    notes_keywords = ['slush', 'taart', 'diploma', 'snoepzakjes', 'bracelet']
     notes = [note for note in notes_keywords if note in items.lower()]
     return ', '.join(notes)
 
@@ -111,12 +111,12 @@ for row in worksheet.iter_rows():
         if cell.value is not None and cell.value != '':
             cell.font = font
 
-uniform_column_width = 160
+uniform_column_width = 52
 for column in worksheet.columns:
     worksheet.column_dimensions[column[0].column_letter].width = uniform_column_width
 
 # Set a uniform row height (in points)
-uniform_row_height = 50
+uniform_row_height = 23
 for row in worksheet.iter_rows():
     for cell in row:
         worksheet.row_dimensions[cell.row].height = uniform_row_height
