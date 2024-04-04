@@ -111,12 +111,12 @@ for row in worksheet.iter_rows():
         if cell.value is not None and cell.value != '':
             cell.font = font
 
-uniform_column_width = 52
+uniform_column_width = 20.71
 for column in worksheet.columns:
     worksheet.column_dimensions[column[0].column_letter].width = uniform_column_width
 
 # Set a uniform row height (in points)
-uniform_row_height = 23
+uniform_row_height = 22.5
 for row in worksheet.iter_rows():
     for cell in row:
         worksheet.row_dimensions[cell.row].height = uniform_row_height
