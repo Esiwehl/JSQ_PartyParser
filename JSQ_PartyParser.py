@@ -16,7 +16,7 @@ def getPartyType(items):
         party_type = 'Snack'
     elif 'Meal' in items:
         party_type = 'Meal'
-    else:
+    else :
         party_type = 'Onbekend'
     
     # Extracting the duration
@@ -26,6 +26,8 @@ def getPartyType(items):
         duration = 90
     elif '120 min' in items:
         duration = 120
+    elif '150 min' in items:
+        duration = 150
     else:
         duration = None
 
